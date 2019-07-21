@@ -1,0 +1,409 @@
+﻿
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/cdmlogo.ico" type="image/x-icon" /> <!-- favicon icon -->
+    <title>c4rl1n</title>
+
+
+
+
+    <style>
+
+        
+
+
+/*normal styling */
+
+
+#div1{
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(black, indigo, orange);
+	border-radius: 30px;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 10s infinite;
+}
+
+#clock{
+	
+	width: 72px;
+    height: 30px;
+    background: linear-gradient(black, indigo, red);
+	
+    transition: all 0.8s;
+    position: relative;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+	border-radius: 35px;
+	
+}
+
+
+
+
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: ease-in-out;}
+#div1 {-webkit-animation-timing-function: ease-in-out;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: ease-out;}
+#div5 {-webkit-animation-timing-function: ease-in-out;}
+#div6 {-webkit-animation-timing-function: ease-out;}
+/* Standard syntax */
+#div1 {animation-timing-function: ease-in-out;}
+#clock{animation-timing-function: ease-out;}
+#div1 {-webkit-animation-timing-function: ease-out-in;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+#div6 {animation-timing-function: ease-out;}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body
+{
+	
+	background-color: black;
+	color: white;		
+}
+
+main
+{
+    
+    background: radial-gradient(black, indigo, black, indigo, black);
+	opacity: 0.9;
+    color: white;
+    text-align:center;
+    border-radius: 50px;
+}
+
+
+
+section
+{
+
+	background: url(../images/space.jpg); 
+	
+}
+
+header
+{
+	margin-top: 70px;
+
+}
+
+
+
+
+
+
+
+h1,h2,h3,h4
+{
+	text-align: center;
+}
+
+img 
+{
+	/*height:120px; */
+	border-radius: 25px;
+	transition: all 0.5s;
+	/*opacity: 0.5;*/
+}
+
+img:hover 
+{
+    opacity: 0.4;
+	transition: all 0.5s;
+    /* on mouse hover normal opacity   */
+}
+
+nav
+{
+
+    position: fixed;
+	right: 0px; 
+	top: 0em; 
+	width: 100%;
+    text-align:center;
+	background: radial-gradient(black, indigo, black);
+	opacity: 0.7;
+	z-index: 9;
+	transition: all 0.8s;
+	
+	
+	
+
+	/* background: radial-gradient(black, indigo); */
+    
+	/* styling for the nav */
+}
+
+
+
+
+
+
+nav li
+{
+    display: inline-block;
+}
+
+
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+li a {
+	
+    display: block;
+    background: radial-gradient(black, indigo);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+	border-radius: 35px;
+}
+
+li a:hover 
+{
+    
+    color: black;
+	opacity: 0.9;
+	transition: all 0.5s;
+}
+
+
+
+
+
+
+
+/*mobile style */
+
+@media screen and (max-width: 480px) 
+{
+	
+body 
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+		background: url(../images/space.jpg);
+	} 
+
+	
+main 
+
+	{
+		background: radial-gradient(indigo, black);
+	}
+
+
+
+nav
+	
+
+	{
+		background: radial-gradient(indigo, black);
+		font-size: 120%;
+	}
+
+li a
+
+	{
+	
+		background: black);
+		
+	}
+
+
+	
+li a:hover 
+{
+    
+	
+	background: radial-gradient(indigo, black);
+    color: black;
+	opacity: 0.9;
+	transition: all 0.9s;
+}
+
+	
+	
+	
+	
+}
+
+
+/*footer*/
+
+
+
+footer
+{
+
+	position: absolute;
+	text-align:center;
+	color: black;
+	opacity: 0.7;
+}
+
+
+
+figure
+{
+	
+	
+	
+	text-align:center;
+	
+}
+
+
+figcaption
+{
+font-family:"arial";
+font-size: 60%;
+
+	
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+
+
+
+<body onload="startTime()">
+
+
+
+    <header>
+
+
+        <script src="clock.js">
+        </script>
+
+
+        <h1>Carlin&copy</h1>
+
+
+        <div id="clock"></div>
+
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="1" style="width:50px;height:50px;"></a></li>
+
+
+        </ul>
+    </nav>
+    <!-- navigation -->
+    <main>
+
+        <h2>M.c4rl1n</h2>
+
+        <form method="get" action="http://www.google.co.uk/search">
+            <input type="text" name="q" placeholder="<o)))><" value="" />
+            <input type="submit" value="♣" />
+        </form> <!-- searcher-->
+
+
+
+        <p>Carlin Technologies&copy</p>
+
+
+
+
+        <div id="div1">carlin</div>
+
+
+
+        <section>
+
+            <h3>LINKs</h3>
+
+            
+            <a href="part10.html"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="4" style="width:100px;height:100px;"></a>
+            
+        </section>
+
+        <br>
+
+
+
+        <!-- breaks just for  testing stlying -->
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+
+
+
+
+
+        <div id="div1">
+            <a href="https://github.com/Carlin91">
+                <img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="my github" style="width:30px;height:30px;border:0;">
+        </div>
+        </a>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
