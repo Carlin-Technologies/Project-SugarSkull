@@ -1,409 +1,221 @@
 ﻿
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-
+    <title>CARLIN TECHNOLOGIES</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/cdmlogo.ico" type="image/x-icon" /> <!-- favicon icon -->
-    <title>c4rl1n</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate">
 
 
-
-
-    <style>
-
-        
-
-
-/*normal styling */
-
-
-#div1{
-    width: 60px;
-    height: 30px;
-    background: linear-gradient(black, indigo, orange);
-	border-radius: 30px;
-    font-weight: bold;
-    position: relative;
-    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymove 10s infinite;
-}
-
-#clock{
-	
-	width: 72px;
-    height: 30px;
-    background: linear-gradient(black, indigo, red);
-	
-    transition: all 0.8s;
-    position: relative;
-    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymove 5s infinite;
-	border-radius: 35px;
-	
-}
-
-
-
-
-
-/* Safari 4.0 - 8.0 */
-#div1 {-webkit-animation-timing-function: ease-in-out;}
-#div1 {-webkit-animation-timing-function: ease-in-out;}
-#div2 {-webkit-animation-timing-function: ease;}
-#div3 {-webkit-animation-timing-function: ease-in;}
-#div4 {-webkit-animation-timing-function: ease-out;}
-#div5 {-webkit-animation-timing-function: ease-in-out;}
-#div6 {-webkit-animation-timing-function: ease-out;}
-/* Standard syntax */
-#div1 {animation-timing-function: ease-in-out;}
-#clock{animation-timing-function: ease-out;}
-#div1 {-webkit-animation-timing-function: ease-out-in;}
-#div2 {animation-timing-function: ease;}
-#div3 {animation-timing-function: ease-in;}
-#div4 {animation-timing-function: ease-out;}
-#div5 {animation-timing-function: ease-in-out;}
-#div6 {animation-timing-function: ease-out;}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
-}
-
-/* Standard syntax */
-@keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
-	
-	
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-body
-{
-	
-	background-color: black;
-	color: white;		
-}
-
-main
-{
-    
-    background: radial-gradient(black, indigo, black, indigo, black);
-	opacity: 0.9;
-    color: white;
-    text-align:center;
-    border-radius: 50px;
-}
-
-
-
-section
-{
-
-	background: url(../images/space.jpg); 
-	
-}
-
-header
-{
-	margin-top: 70px;
-
-}
-
-
-
-
-
-
-
-h1,h2,h3,h4
-{
-	text-align: center;
-}
-
-img 
-{
-	/*height:120px; */
-	border-radius: 25px;
-	transition: all 0.5s;
-	/*opacity: 0.5;*/
-}
-
-img:hover 
-{
-    opacity: 0.4;
-	transition: all 0.5s;
-    /* on mouse hover normal opacity   */
-}
-
-nav
-{
-
-    position: fixed;
-	right: 0px; 
-	top: 0em; 
-	width: 100%;
-    text-align:center;
-	background: radial-gradient(black, indigo, black);
-	opacity: 0.7;
-	z-index: 9;
-	transition: all 0.8s;
-	
-	
-	
-
-	/* background: radial-gradient(black, indigo); */
-    
-	/* styling for the nav */
-}
-
-
-
-
-
-
-nav li
-{
-    display: inline-block;
-}
-
-
-ul 
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
- 
-}
-
-li a {
-	
-    display: block;
-    background: radial-gradient(black, indigo);
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-	border-radius: 35px;
-}
-
-li a:hover 
-{
-    
-    color: black;
-	opacity: 0.9;
-	transition: all 0.5s;
-}
-
-
-
-
-
-
-
-/*mobile style */
-
-@media screen and (max-width: 480px) 
-{
-	
-body 
-	{
-		margin-left: 10%;
-		margin-right: 10%;
-		background: radial-gradient(red, black);
-	} 
-
-	
-main 
-
-	{
-		background: radial-gradient(indigo, black);
-	}
-
-
-
-nav
-	
-
-	{
-		background: radial-gradient(indigo, black);
-		font-size: 120%;
-	}
-
-li a
-
-	{
-	
-		background: black);
-		
-	}
-
-
-	
-li a:hover 
-{
-    
-	
-	background: radial-gradient(indigo, black);
-    color: black;
-	opacity: 0.9;
-	transition: all 0.9s;
-}
-
-	
-	
-	
-	
-}
-
-
-/*footer*/
-
-
-
-footer
-{
-
-	position: absolute;
-	text-align:center;
-	color: black;
-	opacity: 0.7;
-}
-
-
-
-figure
-{
-	
-	
-	
-	text-align:center;
-	
-}
-
-
-figcaption
-{
-font-family:"arial";
-font-size: 60%;
-
-	
-}
-
-
-
-
-
-
-    </style>
 </head>
-
 
 
 
 <body onload="startTime()">
 
 
+    <!-- Side Navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+        <img src="16.PNG" style="width:30%;" class="w3-animate-zoom">
+        <!--<h1 class="w3-xxxlarge w3-text-theme"></h1>-->
 
-    <header>
-
-
-        <script src="clock.js">
-        </script>
-
-
-        <h1>Carlin&copy</h1>
-
-
+        <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a href="index.html" class="w3-bar-item w3-button">Downloads</a>
+        <a href="About.html" class="w3-bar-item w3-button">About</a>
         <div id="clock"></div>
 
 
+    </nav>
+
+    <!-- Header -->
+    <header class="w3-container w3-theme w3-padding" id="myHeader">
+        <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+        <div class="w3-center">
+            <img src="16.PNG" style="width:30%;" class="w3-animate-opacity">
+            <h5 class="w3-xxxlarge w3-animate-bottom">Carlin Technologies</h5>
+            <script type="text/javascript" src="http://htmlfreecodes.com/codes/rain.js"></script>
+        </div>
+        <script src="clock.js"></script>
+
+        <!-- <div class="w3-padding-32">
+            <button class="w3-btn w3-xlarge w3-theme-dark w3-hover-teal" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">What's on?</button>
+
+        </div> -->
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="1" style="width:50px;height:50px;"></a></li>
-
-
-        </ul>
-    </nav>
-    <!-- navigation -->
-    <main>
-
-        <h2>M.c4rl1n</h2>
-
-        <form method="get" action="http://www.google.co.uk/search">
-            <input type="text" name="q" placeholder="<o)))><" value="" />
-            <input type="submit" value="♣" />
-        </form> <!-- searcher-->
-
-
-
-        <p>Carlin Technologies&copy</p>
-
-
-
-
-        <div id="div1">carlin</div>
-
-
-
-        <section>
-
-            <h3>GAME CLICK LOGO BELOW</h3>
-
-            
-            <a href="part10.html"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="4" style="width:100px;height:100px;"></a>
-            
-        </section>
-
-        <br>
-
-
-
-        <!-- breaks just for  testing stlying -->
-        <br>
-        <br>
-        <br>
-        <br>
-    </main>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <footer>
-
-
-
-
-
-        <div id="div1">
-            <a href="https://github.com/Carlin91">
-                <img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="my github" style="width:30px;height:30px;border:0;">
+    <!-- Modal -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-top">
+            <header class="w3-container w3-theme">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                      class="w3-button w3-display-topright">&times;</span>
+                <h4>Games</h4>
+                <h5><i class="fa fa-smile-o"></i></h5>
+            </header>
+            <div class="w3-padding">
+                <p><a href="#" target="_blank">Free Games! </a></p>
+                <p><a class="w3-btn" href="#"></a></p>
+            </div>
+            <footer class="w3-container w3-theme">
+                <p>Carlin Tech</p>
+            </footer>
         </div>
-        </a>
+    </div>
+
+    <!-- ENS -->
+
+    <h2 class="w3-center">Software. Databases. Games</h2>
+    <div class="w3-content" style="max-width:400px;max-height:450px;position:relative">
+
+        <img src="2.PNG" style="width:100%;" class="w3-animate-zoom">
+        <a href="part10.html"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="4" style="width:100px;height:100px;"></a>
+        <p>Try New Game!</p>
+
+
+    </div>
+    <hr>
+
+
+
+    <img src="purps.jpg" style="width:100%;" class="w3-animate-zoom">
+
+
+
+
+
+    <div class="w3-container">
+        <hr>
+        <div class="w3-center">
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <hr>
+        <h2 class="w3-center">Contact Us</h2>
+
+        <br>
+
+    </div>
+
+
+    <hr>
+
+    <br>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-dark">
+        <h3>Carlin Technologies</h3>
+
+        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-theme w3-padding">Go To Top</span>&nbsp;
+            <a class="w3-text-white" href="#myHeader">
+                <span class="w3-xlarge">
+                    <i class="fa fa-chevron-circle-up"></i>
+                </span>
+            </a>
+        </div>
+        <!--   <p>
+            <a href="https://twitter.com/MoransPubMKE?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @CarlinTech</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </p> -->
+        <p>copyright 2019&nbsp;&nbsp;<a href="w3css_references.asp" class="w3-btn w3-theme" target="_blank">M. Carlin </a></p>
+        <p>Powered by <a href="#" target="_blank">Carlin Tech</a></p>
+        <p>  </p>
+
     </footer>
 
+    <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+        <script>
+            // Side navigation
+            function w3_open() {
+                var x = document.getElementById("mySidebar");
+                x.style.width = "100%";
+                x.style.fontSize = "40px";
+                x.style.paddingTop = "10%";
+                x.style.display = "block";
+            }
 
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
 
+            // Tabs
+            function openCity(evt, cityName) {
+                var i;
+                var x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                var activebtn = document.getElementsByClassName("testbtn");
+                for (i = 0; i < x.length; i++) {
+                    activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " w3-theme-dark";
+            }
 
+            var mybtn = document.getElementsByClassName("testbtn")[0];
+            mybtn.click();
+
+            // Accordions
+            function myAccFunc(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+
+            // Slideshows
+            var slideIndex = 1;
+
+            function plusDivs(n) {
+                slideIndex = slideIndex + n;
+                showDivs(slideIndex);
+            }
+
+            function showDivs(n) {
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = x.length };
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+
+            showDivs(1);
+
+            // Progress Bars
+            function move() {
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width == 100) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        elem.style.width = width + '%';
+                        elem.innerHTML = width * 1 + '%';
+                    }
+                }
+            }
+        </script>
 
 </body>
-
 </html>
