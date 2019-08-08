@@ -26,8 +26,8 @@
         <!--<h1 class="w3-xxxlarge w3-text-theme"></h1>-->
 
         <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
         <a href="downloads.html" class="w3-bar-item w3-button">Downloads</a>
-        <a href="about.html" class="w3-bar-item w3-button">About</a>
         <div id="clock"></div>
 
 
@@ -38,9 +38,8 @@
         <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
         <div class="w3-center">
             <img src="16.png" style="width:30%;" class="w3-animate-opacity">
-            <h5 class="w3-xxxlarge w3-animate-bottom">Carlin Technologies</h5><p>©</p>
+            <h5 class="w3-xxxlarge w3-animate-bottom">About</h5>
             <script type="text/javascript" src="rain.js"></script>
-
         </div>
         <script src="clock.js"></script>
 
@@ -74,9 +73,9 @@
     <h2 class="w3-center">Software. Databases. Games</h2>
     <div class="w3-content" style="max-width:400px;max-height:450px;position:relative">
 
-        <img src="2.PNG" style="width:100%;" class="w3-animate-zoom">
+        <img src="grad.jpg" style="width:100%;" class="w3-animate-zoom">
         <a href="part10.html"><img src="https://avatars1.githubusercontent.com/u/25612318?s=460&v=4" alt="4" style="width:100px;height:100px;"></a>
-        <p>Try New Game!</p>
+        <p></p>
 
 
     </div>
@@ -139,84 +138,84 @@
     </footer>
 
     <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-        <script>
-            // Side navigation
-            function w3_open() {
-                var x = document.getElementById("mySidebar");
-                x.style.width = "100%";
-                x.style.fontSize = "40px";
-                x.style.paddingTop = "10%";
-                x.style.display = "block";
+    <script>
+        // Side navigation
+        function w3_open() {
+            var x = document.getElementById("mySidebar");
+            x.style.width = "100%";
+            x.style.fontSize = "40px";
+            x.style.paddingTop = "10%";
+            x.style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Tabs
+        function openCity(evt, cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
             }
-
-            function w3_close() {
-                document.getElementById("mySidebar").style.display = "none";
+            var activebtn = document.getElementsByClassName("testbtn");
+            for (i = 0; i < x.length; i++) {
+                activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
             }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " w3-theme-dark";
+        }
 
-            // Tabs
-            function openCity(evt, cityName) {
-                var i;
-                var x = document.getElementsByClassName("city");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                var activebtn = document.getElementsByClassName("testbtn");
-                for (i = 0; i < x.length; i++) {
-                    activebtn[i].className = activebtn[i].className.replace(" w3-theme-dark", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " w3-theme-dark";
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
             }
+        }
 
-            var mybtn = document.getElementsByClassName("testbtn")[0];
-            mybtn.click();
+        // Slideshows
+        var slideIndex = 1;
 
-            // Accordions
-            function myAccFunc(id) {
-                var x = document.getElementById(id);
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width == 100) {
+                    clearInterval(id);
                 } else {
-                    x.className = x.className.replace(" w3-show", "");
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
                 }
             }
-
-            // Slideshows
-            var slideIndex = 1;
-
-            function plusDivs(n) {
-                slideIndex = slideIndex + n;
-                showDivs(slideIndex);
-            }
-
-            function showDivs(n) {
-                var x = document.getElementsByClassName("mySlides");
-                if (n > x.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = x.length };
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                x[slideIndex - 1].style.display = "block";
-            }
-
-            showDivs(1);
-
-            // Progress Bars
-            function move() {
-                var elem = document.getElementById("myBar");
-                var width = 1;
-                var id = setInterval(frame, 10);
-                function frame() {
-                    if (width == 100) {
-                        clearInterval(id);
-                    } else {
-                        width++;
-                        elem.style.width = width + '%';
-                        elem.innerHTML = width * 1 + '%';
-                    }
-                }
-            }
-        </script>
+        }
+    </script>
 
 </body>
 </html>
