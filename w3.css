@@ -14,8 +14,8 @@ html {
 
 body {
     margin: 0;
-    background-image:url(purps.jpg)
-   /* background-color: #250040 !important;*/
+    /*background-image:url(space.jpg)*/
+   background-color: #250040 !important;
     
 }
 
@@ -220,10 +220,12 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Fascinate", serif;
     font-weight: 400;
-    margin: 10px 0
+    margin: 10px 0;
+	color:white;
 }
 body {
     font-family: "Fascinate", serif;
+	color: white;
 }
 
 
@@ -444,7 +446,8 @@ a {
 .w3-sidebar {
     height: 100%;
     width: 200px;
-    background-color: #fff;
+    /*background-color: #fff;*/
+	 background-image:url(purps.jpg);
     position: fixed !important;
     z-index: 1;
     overflow: auto
