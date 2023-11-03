@@ -1,12 +1,9 @@
-
 <!doctype html> 
 <html lang="en"> 
 <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes" />
-
-    <title>Carlin TECH Prototype CODE COPYRight</title>
+    <title>Carlin TECH Prototype CODE COPYRIGHT</title>
     <link rel="icon" href="/cdmlogo.ico" type="image/x-icon" /> <!-- favicon icon -->
     <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
     <style type="text/css">
@@ -50,8 +47,7 @@ var scoreText;
 
 var game = new Phaser.Game(config);
 
-function preload ()
-{
+function preload() {
     this.load.image('sky', 'assets/sky.png');
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
@@ -59,8 +55,7 @@ function preload ()
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
 }
 
-function create ()
-{
+function create() {
     //  A simple background for our game
     this.add.image(400, 300, 'sky');
 
@@ -114,17 +109,15 @@ function create ()
         setXY: { x: 12, y: 0, stepX: 70 }
     });
 
-    stars.children.iterate(function (child) {
-
+    stars.children.iterate(function(child) {
         //  Give each star a slightly different bounce
-        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.9));
-
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
 
     bombs = this.physics.add.group();
 
     //  The score
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: 'indigo' });
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
@@ -134,85 +127,65 @@ function create ()
     //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
+    //  Checks to see if the player overlaps with any of the bombs, if he does call the hitBomb function
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
 
-function update ()
-{
-    if (gameOver)
-    {
+function update() {
+    if (gameOver) {
         return;
     }
 
-    if (cursors.left.isDown)
-    {
+    if (cursors.left.isDown) {
         player.setVelocityX(-160);
 
         player.anims.play('left', true);
     }
-    else if (cursors.right.isDown)
-    {
+    else if (cursors.right.isDown) {
         player.setVelocityX(160);
 
         player.anims.play('right', true);
     }
-    else
-    {
+    else {
         player.setVelocityX(0);
 
         player.anims.play('turn');
     }
 
-    if (cursors.up.isDown && player.body.touching.down)
-    {
+    if (cursors.up.isDown && player.body.touching.down) {
         player.setVelocityY(-330);
     }
 }
 
-function collectStar (player, star)
-{
+function collectStar(player, star) {
     star.disableBody(true, true);
 
     //  Add and update the score
     score += 10;
     scoreText.setText('Score: ' + score);
 
-    if (stars.countActive(true) === 0)
-    {
+    if (stars.countActive(true) === 0) {
         //  A new batch of stars to collect
-        stars.children.iterate(function (child) {
-
+        stars.children.iterate(function(child) {
             child.enableBody(true, child.x, 0, true, true);
-
         });
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
         var bomb = bombs.create(x, 16, 'bomb');
-  
         bomb.setBounce(1);
-        
         bomb.setCollideWorldBounds(true);
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-        bomb.allowGravity = false;
-
     }
 }
 
-function hitBomb (player, bomb)
-{
+function hitBomb(player, bomb) {
     this.physics.pause();
 
     player.setTint(0xff0000);
-  
-
     player.anims.play('turn');
 
     gameOver = true;
-
-
-
-    location.reload();
 }
 
 </script>
